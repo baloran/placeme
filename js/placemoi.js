@@ -14,14 +14,14 @@ $(function () {
 				}
 			}).blur(function(){
 				that = $(this);
-				console.log(that);
 				papa = that.parent();
 				place = papa.find('.placeme');
-				console.log(place);
-					if (that.val() == '') {
-						that.val(place.text())
-						place.remove();
-					};
+				if (that.val() == '') {
+					that.val(place.text())
+					place.remove();
+				}else{
+					place.toggleClass('placeme-off');
+				}
 			})
 		}
 	}
